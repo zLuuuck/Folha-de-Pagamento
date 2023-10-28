@@ -1,5 +1,12 @@
 import os
-os.system('cls')
+import platform
+def limpar():
+    sistema = platform.system()
+    if sistema == 'Windows':
+        os.system('cls')
+    elif sistema == 'Linux':
+        os.system('clear')
+limpar()
 
 salario = float(input("Qual seu salário? (Para números com virgula, substitua a mesma por '.')\n-> "))
 
